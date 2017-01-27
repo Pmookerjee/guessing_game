@@ -1,0 +1,26 @@
+html {
+  font-family:arial;
+}
+
+
+header div{
+  color:black;
+  font-size: 16px;
+  text-align: center;
+}
+
+h1 {
+  color: #4783B3;
+  text-align: center;
+}
+
+span:before {
+    content:" ";
+    display:inline-block;
+    width:22px;
+}
+
+h3 {
+  color: #4783B3;
+  text-align: justify;
+}
