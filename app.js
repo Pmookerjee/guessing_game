@@ -11,6 +11,7 @@ function guessingGame(){
   var myAnswerSix = 'gibberish';
   var myAnswerSeven = ['adrian', 'soren', 'noah'];
   var keepGuessing= true;
+  var correctAnswers = 0; //to tally user's correct guesses
 
   var user = prompt('What\'s your name?');
   console.log('line 15: user is ', user);
@@ -25,6 +26,7 @@ function guessingGame(){
   if(answerOne.toLowerCase() === myAnswerOne){
     console.log('line 23: answerOne is ', answerOne)
     alert('Wow. How did you know that?');
+    correctAnswers ++;
   } else {
     console.log('line 23: answerOne is', answerOne);
     alert('I am from ' + myAnswerOne + '.');
@@ -34,6 +36,7 @@ function guessingGame(){
   if(answerTwo.toLowerCase() === myAnswerTwo){
     console.log('line 30: answerTwo is ', answerTwo)
     alert('You really know me well!');
+    correctAnswers ++;
   } else {
     console.log('line 30: answerTwo is ', answerTwo);
     alert('My favorite color is ' + myAnswerTwo + '.');
@@ -42,6 +45,7 @@ function guessingGame(){
   var answerThree = prompt('What is my best sport?');
   if(answerThree.toLowerCase() === myAnswerThree){
     console.log('line 37: answerThree is ', answerThree);
+    correctAnswers ++;
     alert('Yep! You\'re a superstar.');
   } else {
     console.log('line 37: answerThree is ', answerThree)
@@ -51,6 +55,7 @@ function guessingGame(){
   var answerFour = prompt('What instrument do I like to play?');
   if(answerFour.toLowerCase() === myAnswerFour){
     console.log('line 44: answerFour is', answerFour);
+    correctAnswers ++;
     alert('Badum bum bum... ching! Well done...');
   } else {
     console.log('line 44: answerFour is ', answerFour);
@@ -64,6 +69,7 @@ function guessingGame(){
     if(((answerFive.toLowerCase() === myAnswerFive) || (answerFive.toLowerCase() === myAnswerSix)) && ((answerSix.toLowerCase() === myAnswerFive) || (answerSix.toLowerCase() === myAnswerSix))) {
       console.log('line 55: answerFive and answerSix are ' , answerFive + ' and ' + answerSix);
       alert('You guessed it! You are amazing!');
+      correctAnswers ++;
       keepGuessing = false;
     } else {
       var tryAgain = prompt('Not quite. Guess again? Enter \'T\' to try again, or \'Q\' to quit');
@@ -89,9 +95,10 @@ function guessingGame(){
   if(myAnswerSeven.indexOf(answerSeven.toLowerCase()) > -1){
     var son = myAnswerSeven.indexOf(answerSeven.toLowerCase());
     console.log('line 90: son (index of array) is: ', son);
-    alert('You guessed ' + myAnswerSeven[son] + ' correctly. Now I\'m really a bit concerned.');
+    correctAnswers ++;
+    alert('You guessed ' + myAnswerSeven[son] + ' correctly. You guessed '  + correctAnswers + ' answers correctly!');
   } else {
-    console.log('line 90: son (index of array) is: ', son);
-    alert('Their names are ' + myAnswerSeven[0] + ', ' + myAnswerSeven[1] + ', ' + myAnswerSeven[2] + '.');
+    console.log('line 90: ', myAnswerSeven.indexOf(answerSeven.toLowerCase()));
+    alert('Their names are ' + myAnswerSeven[0] + ', ' + myAnswerSeven[1] + ', ' + myAnswerSeven[2] + '. You guessed ' + correctAnswers + ' correctly!');
   }
 }
