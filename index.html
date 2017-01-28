@@ -3,12 +3,8 @@
 <head>
   <link rel="stylesheet" href="stylesheet.css" type="text/css">
   <title>About Me</title>
-
 </head>
-
 <body>
-
-
   <header>
     <h1>Paula R. Mookerjee</h1>
     <hr>
@@ -17,8 +13,7 @@
       <span><b>Mobile   </b>206.351.2834</span>
       <span><b>Online   </b><a href="mailto:you@yourdomain.com">pmookerjee@gmail.com</a></span>
     </div>
-  </header>
-
+  </header>  
   <main>
     <section>
       <br>
@@ -35,15 +30,52 @@
         <br>
         <h3> EXPERIENCE </h3>
         <hr>
+        <h4>Pavia Systems</h4>
+        <h4 class="title">Lead QA Engineer</h4>
         <ul>
-          <li>Pavia Systems</li>
-          <li>Urbanspoon</li>
-          <li>Willis Marketing</li>
-        </section>
-      </main>
-      <br><br>
-      <button id = "gameButton" onclick="guessingGame()">Want to play a guessing game about me?</button>
-      <script src ='app.js'></script>
-    </body>
-    <footer> <!-- Cited: http://stackoverflow.com/ for span:before codeblock --> </footer>
-    </html>
+          <li>Manage QA testing front/back end for 3 teams of 6 developers</li>
+          <li>Automated web, api, and iOS device testing using Selenium, Appium, Runscope, mocha and chai</li>
+          <li>Proficiency with MySQL queries</li>
+          <li>Extensive experience with testing tools such as Paw, mitmProxy, Charles, New Relic, Kibana</li>
+          <li>Working familiarity with Node.js</li>
+        </ul>
+        <h4>Zomato</h4>
+        <h4 class="title">QA Engineer</h4>
+        <ul>
+          <li>Manual mobile and web testing for consumer apps in Agile enviroment with focus on iOS and Android</li>
+          <li>Api tests using Node JS, mocha, chai and superagent</li>
+          <li>SQL analyst for the Content/Data collection team</li>
+          <li>Familiarity with Asana, Trello and Redmine</li>
+          <li>Basic familiarity with Ruby, JS and Coffeescript</li>
+        </ul>
+        <h4>Urbanspoon</h4>
+        <h4 class="title">QA Analyst</h4>
+        <ul>
+          <li>Mobile and web testing of consumer apps</li>
+          <li>Maintenance of automated mobile tests written with Cucumber and Appium</li>
+          <li>Developed and maintained regression tests on Selenium builder, integrated with Saucelabs</li>
+          <li>Developed and maintained smoke tests for api endpoints using Runscope</li>
+          <li>Wrote and executed test plans using TestRail</li>
+          <li>Issue logging on Redmine and Trello</li>
+        </ul>
+        <h4 class="title">Technical Support, Content Admin</h4>
+        <ul>
+          <li>On-call ipad/web support for Rezbook app for restaurant managers using Rezbook</li>
+          <li>Live technical troubleshooting, assistance with feature set up, billing, account updates</li>
+          <li>Ticket logging in Salesforce and follow up support</li>
+          <li>Management of Sales and ads for restaurant advertising</li>
+          <li>Customer support, editing and updating of user generated content</li>
+          <li>Content fraud investigation and removal</li>
+        </ul>
+        <h4>Willis Marketing</h4>
+        <h4 class="title">Direct Marketing Brand Ambassador</h4>
+        <p id="willisMarketing">Brand ambassador, responsible for presenting products to the public in a market setting through face-to-face interaction. Strong interpersonal skills and rapport-building abilities were required for daily tasks leading product demos. Helped to build interest in gourmet products and up-sell additional products based on the preferences of individual customers or small groups.</p>
+      </section>
+    </main>
+    <br><br>
+    <button class="button" onclick="guessingGame()">Want to play a guessing game about me?</button>
+    <br>
+    <script src ='app.js'></script>
+  </body>
+  <footer> <!-- Cited: http://stackoverflow.com/ for span:before codeblock --> </footer>
+  </html>
