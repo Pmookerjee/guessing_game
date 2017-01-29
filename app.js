@@ -7,21 +7,19 @@ function guessingGame(){
   var myAnswerTwo = 'orange';
   var myAnswerThree = 'snowboarding';
   var myAnswerFour = 'drums';
-  var myAnswerFive = 'french';
-  var myAnswerSix = 'gibberish';
-  var myAnswerSeven = ['adrian', 'soren', 'noah'];
-  var keepGuessing= true;
+  var myAnswerFive = ['french', 'gibberish'];
+  var myAnswerSix = ['adrian', 'soren', 'noah'];
   var correctAnswers = 0; //to tally user's correct guesses
 
   var user = prompt('What\'s your name?');
-  console.log('line 15: user is ', user);
   alert('Hello ' + user + '. Welcome to my game!');
+
   //Ask user a question
   //Take their answer as input; store it in a var
   //Validate their answer matches my answer
-  //Depending on true or fasle, provide feedback
+  //Depending on true or false, provide feedback
 
-
+  //Question One
   var answerOne = prompt('What state am I from?');
   if(answerOne.toLowerCase() === myAnswerOne){
     console.log('line 23: answerOne is ', answerOne)
@@ -32,6 +30,7 @@ function guessingGame(){
     alert('I am from ' + myAnswerOne + '.');
   }
 
+  //Question Two
   var answerTwo = prompt('What is my favorite color?');
   if(answerTwo.toLowerCase() === myAnswerTwo){
     console.log('line 30: answerTwo is ', answerTwo)
@@ -42,6 +41,7 @@ function guessingGame(){
     alert('My favorite color is ' + myAnswerTwo + '.');
   }
 
+  //Question Three
   var answerThree = prompt('What is my best sport?');
   if(answerThree.toLowerCase() === myAnswerThree){
     console.log('line 37: answerThree is ', answerThree);
@@ -52,6 +52,7 @@ function guessingGame(){
     alert('Close! My best sport is ' + myAnswerThree + '.');
   }
 
+  //Question Four
   var answerFour = prompt('What instrument do I like to play?');
   if(answerFour.toLowerCase() === myAnswerFour){
     console.log('line 44: answerFour is', answerFour);
@@ -62,43 +63,33 @@ function guessingGame(){
     alert('It happens to be the... drumroll... ' + myAnswerFour + '.');
   }
 
-  while(keepGuessing){
-    var answerFive = prompt('What language do I speak?');
-    var answerSix = prompt('What other language do I speak?');
+  //Question Five
+  var answerFive = [];
+  answerFive[0] = prompt('What language do I speak?');
+  answerFive[1] = prompt('What other language do I speak?');
 
-    if(((answerFive.toLowerCase() === myAnswerFive) || (answerFive.toLowerCase() === myAnswerSix)) && ((answerSix.toLowerCase() === myAnswerFive) || (answerSix.toLowerCase() === myAnswerSix))) {
-      console.log('line 55: answerFive and answerSix are ' , answerFive + ' and ' + answerSix);
-      alert('You guessed it! You are amazing!');
-      correctAnswers ++;
-      keepGuessing = false;
-    } else {
-      var tryAgain = prompt('Not quite. Guess again? Enter \'T\' to try again, or \'Q\' to quit');
-      switch(tryAgain.toUpperCase()) {
-        case 'Q':
-        console.log('line 59: tryAgain is ', tryAgain);
-        alert('I speak ' + myAnswerFive + ', and ' + myAnswerSix + '.');
-        keepGuessing = false;
-        break;
-        case 'T':
-        keepGuessing = true;
-        break;
-        default:
-        console.log('line 59: tryAgain is ', tryAgain);
-        alert('Sorry. I didn\'t understand your answer');
-        keepGuessing = false;
-        break;
-      }
-    }
+  if(((answerFive[0].toLowerCase() === myAnswerFive[0]) || (answerFive[0].toLowerCase() === myAnswerFive[1])) && ((answerFive[1].toLowerCase() === myAnswerFive[0]) || (answerFive[1].toLowerCase() === myAnswerFive[1]))) {
+    console.log('line 55: answerFive is ' , answerFive[0] + ' and ' + answerFive[1]);
+    alert('You guessed it! You are amazing!');
+    correctAnswers += 2;
+  } else if (((answerFive[0].toLowerCase() === myAnswerFive[0]) || (answerFive[0].toLowerCase() === myAnswerFive[1])) || ((answerFive[1].toLowerCase() === myAnswerFive[0]) || (answerFive[1].toLowerCase() === myAnswerFive[1]))) {
+    console.log('line 55: answerFive is ' , answerFive[0] + ' and ' + answerFive[1]);
+    alert('Nice! You got one of them right! I speak ' + myAnswerFive[0] + ', and ' + myAnswerFive[1] + '.');
+    correctAnswers++;
+  } else {
+    console.log('line 55: answerFive is ' , answerFive[0] + ' and ' + answerFive[1]);
+    alert('I speak ' + myAnswerFive[0] + ', and ' + myAnswerFive[1] + '.');
   }
 
-  var answerSeven = prompt('Okay, last question (I promise): Guess one of my kids\' names...');
-  if(myAnswerSeven.indexOf(answerSeven.toLowerCase()) > -1){
-    var son = myAnswerSeven.indexOf(answerSeven.toLowerCase());
+  //Question Six
+  var answerSix = prompt('Here\'s another question: Guess one of my kids\' names...');
+  if(myAnswerSix.indexOf(answerSix.toLowerCase()) > -1){
+    var son = myAnswerSix.indexOf(answerSix.toLowerCase());
     console.log('line 90: son (index of array) is: ', son);
     correctAnswers ++;
-    alert('You guessed ' + myAnswerSeven[son] + ' correctly. You guessed '  + correctAnswers + ' answers correctly!');
+    alert('You guessed ' + myAnswerSix[son] + ' correctly. You guessed '  + correctAnswers + ' answers correctly!');
   } else {
-    console.log('line 90: ', myAnswerSeven.indexOf(answerSeven.toLowerCase()));
-    alert('Their names are ' + myAnswerSeven[0] + ', ' + myAnswerSeven[1] + ', ' + myAnswerSeven[2] + '. You guessed ' + correctAnswers + ' correctly!');
+    console.log('line 90: ', myAnswerSix.indexOf(answerSix.toLowerCase()));
+    alert('Their names are ' + myAnswerSix[0] + ', ' + myAnswerSix[1] + ', ' + myAnswerSix[2] + '. You guessed ' + correctAnswers + ' correctly!');
   }
 }

@@ -35,6 +35,36 @@ h3 {
   text-indent: 10px;
 }
 
+.list_outer_container {
+  height: 60%;
+  width: 60%;
+  background-color: rgba(224, 224, 224, 0.88);
+  border-radius: 5px;
+  border-color: #4783B3;
+  border-style: solid;
+  border-width: 3px;
+  padding: 5px;
+  margin:0 auto;
+  display:block;
+  -moz-box-shadow: 5px black;
+  -webkit-box-shadow: 5px black;
+}
+
+div h4{
+  text-align: center;;
+}
+
+.list_inner_container {
+  margin: 10px;
+  height: 50%;
+  width: 50%;
+  text-align:left;
+  list-style-position:inside;
+  margin:0 auto;
+  display:block;
+}
+
+
 .button {
   color: white;
   width: 300px;
@@ -45,6 +75,8 @@ h3 {
   background-color: #4783B3;
   margin:0 auto;
   display:block;
+  -moz-box-shadow: 5px rgba(224, 224, 224, 0.88);
+  -webkit-box-shadow: 5px rgba(224, 224, 224, 0.88);
 }
 
 .button:hover {
