@@ -21,6 +21,7 @@ function guessingGame1(){
   //Validate their answer matches my answer
   //Depending on true or false, provide feedback
 
+  // Hellur how you durin?!
   //Question One
   var answerOne = prompt('What state am I from?');
   if(answerOne.toLowerCase() === myAnswerOne){
