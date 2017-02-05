@@ -167,7 +167,7 @@ function guessingGame2() {
     userGuess = prompt('Please enter a number between 1 and 100');
     guesses--;
   }
- }
+}
 }
 
 function guessWhereIveLived(){
@@ -191,5 +191,5 @@ function guessWhereIveLived(){
     }
   }
   alert('I have lived in the following states: ' + myStates[0] + ', ' + myStates[1] + ', ' + myStates[2] + '. You answered ' + correctAnswers + ' out of ' + totalPossibleCorrect + ' answers correctly, ' + user);
- }
+}
 }
