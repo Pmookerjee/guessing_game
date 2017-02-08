@@ -20,6 +20,9 @@ function guessingGame1(){
   //Validate their answer matches my answer
   //Depending on true or false, provide feedback
 
+  // fuck this crap  TEST!
+
+  // Hellur how you durin?!
   //Question One
   function guessMyState(){
     var myAnswerOne = 'washington dc';
